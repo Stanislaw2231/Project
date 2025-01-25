@@ -61,12 +61,12 @@ def create_pipeline(**kwargs):
                 outputs=None,
                 name="streamlit_node",
             ),
-            # # Only streamlit
-            #     node(
-            #         func=streamlit_run,
-            #         inputs="dummy_input",
-            #         outputs=None,
-            #         name="streamlit_node"
-            #     )
+            # Only streamlit
+                # node(
+                #     func=streamlit_run,
+                #     inputs="dummy_input",
+                #     outputs=None,
+                #     name="streamlit_node"
+                # )
         ]
     )

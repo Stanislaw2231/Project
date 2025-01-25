@@ -23,6 +23,6 @@ hyperparameters:
     bootstrap: [true, false]
 
 autogluon:
-  time_limit: 3600
+  time_limit: 15
   model_path: 'data/models'
   eval_metric: 'r2'

@@ -31,17 +31,17 @@ def perform_analysis(data):
     # Check for missing values
     print(data.isnull().sum())
     sns.heatmap(data.isnull(), cbar=False)
-    plt.show()
+    #plt.show()
 
     # Plot histograms
     data.hist(bins=50, figsize=(16, 12))
-    plt.show()
+    #plt.show()
 
     # Correlation matrix for numeric columns
     numeric_data = data.select_dtypes(include=["number"])
     correlation_matrix = numeric_data.corr()
     plt.figure(figsize=(10, 8))
     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f")
-    plt.show()
+    #plt.show()
 
     return data
