@@ -24,7 +24,7 @@ def split_data(data, parameters):
     """
 
     # Declare columns
-    x = data.drop(columns=["TARGET"])
+    x = data[["Type_of_vehicle", "Distance (km)", "temperature", "precipitation", "Traffic_Level", "weather_description", "Type_of_order", "humidity"]]
     y = data["TARGET"]
 
     # Split data

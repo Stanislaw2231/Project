@@ -48,11 +48,7 @@ def train_models(x_train, y_train, x_dev, y_dev, parameters):
     # Defining the metric and problem type (default is "regression")
     eval_metric = parameters["autogluon"].get("eval_metric", "mean_absolute_error")
 
-    hyperparameters = {
-        'XGB': {},       # XGBoost
-    # Add or remove model types as needed
-    }
-    
+
     # Training the model
     predictor = TabularPredictor(
         label="TARGET",
@@ -60,9 +56,8 @@ def train_models(x_train, y_train, x_dev, y_dev, parameters):
         path=model_path,
         problem_type="regression",
     ).fit(
-        hyperparameters=hyperparameters,
         train_data=train_data,
-        time_limit=parameters["autogluon"].get("time_limit", 15),
+        time_limit=parameters["autogluon"].get("time_limit", 3600),
     )
 
 
