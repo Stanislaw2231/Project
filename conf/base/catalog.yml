@@ -1,0 +1,11 @@
+food_time_raw:
+  type: pandas.CSVDataset
+  filepath: data/raw/Food_Time_Data_Set.csv
+
+model_metrics:
+  type: pandas.CSVDataset
+  filepath: data/reporting/model_metrics.csv
+
+dummy_input:
+  type: pandas.CSVDataset
+  filepath: data/reporting/model_metrics.csv
