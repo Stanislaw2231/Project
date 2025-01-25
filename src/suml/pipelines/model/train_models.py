@@ -57,6 +57,7 @@ def train_models(x_train, y_train, x_dev, y_dev, parameters):
         problem_type="regression",
     ).fit(
         train_data=train_data,
+        excluded_model_types=['NN', 'GBM', 'CAT', 'RF', 'XT'],
         time_limit=parameters["autogluon"].get("time_limit", 3600),
     )
 
